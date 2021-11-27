@@ -1,0 +1,21 @@
+.booksContent {
+    border: 1px solid gray;
+    padding: 20px;
+    margin-top: 20px;
+}
+.booksContent__header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.booksContent__layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.booksCard {
+    width: 33.333%;
+}
+
+.booksCard__img {
+}
