@@ -4,7 +4,12 @@ export const fetchbooks = createAsyncThunk(
     'books/fetchBooks',
     async (value, {rejectWithValue}) => {
         try {
-            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${value}+intitle`)
+            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${value}+intitle&key=AIzaSyCxkMixn0bqUKrii2UuzK6Ho9yQve0X8GE`)
+            
+            if(!response.ok) {
+                throw new Error('Server Error!')
+            }
+            
             const data = response.json()
             return data
         } catch (error) {
