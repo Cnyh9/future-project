@@ -35,6 +35,7 @@ export const BooksContent = () => {
                             categories={book.volumeInfo.categories}
                             title={book.volumeInfo.title}
                             authors={book.volumeInfo.authors}
+                            id={book.id}
                         />
                     )
                 })}

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { BookInfo } from "./components/BookInfo/BookInfo"
 import { BooksContent } from "./components/BooksContent/BooksContent"
 import { BooksForm } from "./components/BooksForm/BooksForm"
 import { Mycontext } from "./context/MyContext"
@@ -10,6 +11,7 @@ const App = () => {
     const [sortValue, setSortValue] = useState("relevance")
     const [category, setCategory] = useState("")
     const [booksIndex, setBooksIndex] = useState(30)
+    const [modal, setModal] = useState(false)
 
     const dispatch = useDispatch()
 
@@ -45,11 +47,14 @@ const App = () => {
                 setSortValue,
                 setCategory,
                 loadMoreBooks,
+                modal,
+                setModal,
             }}
         >
             <div className="container">
                 <BooksForm />
-                <BooksContent />
+                {/* <BooksContent /> */}
+                {!modal ? <BooksContent /> : <BookInfo />}
             </div>
         </Mycontext.Provider>
     )
