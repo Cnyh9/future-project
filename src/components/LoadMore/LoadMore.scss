@@ -1,0 +1,16 @@
+.loadMore {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 20px;
+}
+
+.loadMore__btn {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}

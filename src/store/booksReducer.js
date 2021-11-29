@@ -43,7 +43,7 @@ export const fetchMoreBooks = createAsyncThunk(
 const booksSlice = createSlice({
     name: "books",
     initialState: {
-        books: [],
+        books: {},
         status: null,
         error: null,
     },
@@ -61,12 +61,12 @@ const booksSlice = createSlice({
             state.error = action.payload
         },
         [fetchMoreBooks.pending]: (state) => {
-            state.status = "loading"
+            state.status = "uploading"
             state.error = "null"
         },
         [fetchMoreBooks.fulfilled]: (state, action) => {
             state.status = "resolved"
-            state.books = action.payload
+            state.books.items = [...state.books.items, ...action.payload.items]
         },
         [fetchMoreBooks.rejected]: (state, action) => {
             state.status = "rejected"

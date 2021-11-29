@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import "./BooksForm.scss"
 import { MyInput } from "../MyInput/MyInput"
 import { Mycontext } from "../../context/MyContext"
+import { MyBtn } from "../MyBtn/MyBtn"
 
 export const BooksForm = () => {
     const {
@@ -14,17 +15,15 @@ export const BooksForm = () => {
 
     return (
         <div>
+            <h1 className="booksForm__header">Search for books</h1>
             <form className="booksForm" onSubmit={(e) => handleSubmit(e)}>
-                <h1 className="booksForm__header">Search for books</h1>
-                <div>
-                    <MyInput
-                        placeholder="Search for..."
-                        type="search"
-                        value={searchValue}
-                        setSearchValue={setSearchValue}
-                    />
-                </div>
-                <button type="submit">Search</button>
+                <MyInput
+                    placeholder="Search for..."
+                    type="search"
+                    value={searchValue}
+                    setSearchValue={setSearchValue}
+                />
+                <MyBtn type="submit">Search</MyBtn>
             </form>
             <div style={{ marginTop: 10 }}>
                 <select onChange={(e) => setCategory(e.target.value)}>
