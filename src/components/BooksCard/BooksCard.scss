@@ -1,0 +1,35 @@
+.booksCard {
+    width: calc(25% - 30px);
+    padding: 10px;
+    margin: 15px;
+    background-color: darken(#fff, 5%);
+
+    cursor: pointer;
+
+    @media (max-width: 1000px) {
+        width: calc(33.333% - 30px);
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}
+
+.booksCard__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.booksCard__categories {
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.booksCard__title {
+    font-weight: 700;
+    margin-bottom: 20px;
+}

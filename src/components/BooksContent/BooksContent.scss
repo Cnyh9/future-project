@@ -11,11 +11,5 @@
 .booksContent__layout {
     display: flex;
     flex-wrap: wrap;
-}
-
-.booksCard {
-    width: 33.333%;
-}
-
-.booksCard__img {
+    margin: 0 -20px;
 }
