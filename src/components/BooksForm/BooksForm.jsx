@@ -15,7 +15,7 @@ export const BooksForm = () => {
 
     return (
         <div>
-            <h1 className="booksForm__header">Search for books</h1>
+            <h1 className="booksForm__header">Book search</h1>
             <form className="booksForm" onSubmit={(e) => handleSubmit(e)}>
                 <MyInput
                     placeholder="Search for..."
